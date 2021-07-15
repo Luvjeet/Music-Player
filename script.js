@@ -143,10 +143,9 @@ prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 slider.addEventListener('mousemove', function(){
     let x = slider.value;
-    let color = `linear-gradient(90deg, rgb(20, 20, 20)${x}%, rgb(255,255,255) ${x}%)`;
-    slider.style.background = color;
+    slider.style.background = `linear-gradient(90deg, rgb(20, 20, 20)${x}%, rgb(255,255,255) ${x}%)`;
 });
-slider.addEventListener('mousemove', setVolume);
+slider.addEventListener('click', setVolume);
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
